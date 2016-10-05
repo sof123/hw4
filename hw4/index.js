@@ -42,8 +42,6 @@ playLevel(currentLevel);
 
 function playLevel(level)
 {
-	console.log("in play")
-	console.log("weird number is " + (numLevels / (numLevels*6)) * 1000 + (2000 - currentLevel*150));
 
 	flashPicsInterval = setInterval(display, (numLevels / (numLevels*6)) * 1000 + (2000 - currentLevel*100) , order);
 	
@@ -64,7 +62,6 @@ function display ()
 		setTimeout(document.getElementById("currentPic").src = "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Flag_of_Afghanistan_(1880%E2%80%931901).svg/2000px-Flag_of_Afghanistan_(1880%E2%80%931901).svg.png" , 500)
 		
 		document.getElementById("currentPic").src = picArray[whichToDisplay];	
-		console.log(document.getElementById("currentPic").src);	
 		count++;		
 	}
 	else
@@ -123,7 +120,6 @@ function addToPicked(index)
 	pickedPics.push(picArray[index]);
 	document.getElementById(String(pickedIndex)).src = picArray[index];
 	pickedIndex++;
-	console.log(pickedPics)
 }
 
 function getReadyToPlayNextLevel()
